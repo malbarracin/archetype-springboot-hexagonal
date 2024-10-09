@@ -1,0 +1,44 @@
+<project name="BDS Springboot Archetype">
+
+    <bannerLeft>
+        <name>BDS Springboot Archetype</name>
+    </bannerLeft>
+    
+    <publishDate position="right"/>
+
+    <version position="right"/>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.9</version>
+    </skin>
+    
+    <custom>
+        <fluidoSkin>
+            <topBarEnabled>false</topBarEnabled>
+            <sideBarEnabled>true</sideBarEnabled>
+            <breadcrumbDivider>»</breadcrumbDivider>
+            <gitHub>
+                <projectId>gss-bds/bds-archetype-springboot</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>gray</ribbonColor>
+            </gitHub>
+        </fluidoSkin>
+    </custom>
+
+    <body>
+        <menu name="Overview">
+            <item name="About" href="index.html"/>
+            <item name="Introduction" href="project-info.html"/>
+            <item name="Summary" href="summary.html"/>
+            <item name="Dependency Information" href="dependency-info.html"/>
+            <item name="Dependency Updates" href="property-updates-report.html"/>
+            <item name="Plugins" href="plugins.html"/>
+            <item name="Plugin Management" href="plugin-management.html"/>
+            <item name="Distribution Management" href="distribution-management.html"/>
+            <item name="Source Code Management" href="scm.html"/>
+        </menu>
+    </body>
+
+</project>

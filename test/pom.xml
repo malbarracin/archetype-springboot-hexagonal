@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>la.ingenia.devify</groupId>
+    <artifactId>test</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>test</name>
+
+    <parent>
+        <groupId>la.ingenia.devify.assets</groupId>
+        <artifactId>devify-parent-springboot</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <properties>
+        <devify-commons-sb.version>2.0.8</devify-commons-sb.version>
+        <devify-commons-reactive-http-java.version>2.0.1</devify-commons-reactive-http-java.version>
+        <devify-commons-http.version>2.0.5</devify-commons-http.version>
+        <devify-commons-ws.version>2.0.5</devify-commons-ws.version>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>swaggerProfile</id>
+            <activation>
+                <property>
+                    <name>confswagger</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <!-- Configuración específica para Swagger -->
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/java/__packageInPathFormat__/infrastructure/config</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <!--CONFIGURACION PARA AGREGAR DEPENDENCIAS CUSTOMIZABLES-->
+        
+        
+        
+                <!-- Dependencia de MongoDB -->
+        <dependency>
+            <groupId>la.ingenia.devify.assets</groupId>
+            <artifactId>devify-commons-reactive-http-java</artifactId>
+            <version>${devify-commons-reactive-http-java.version}</version>
+        </dependency>
+        
+        <!--Utils-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!--JPA-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--H2-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <scm>
+        <url>${scm.base}${project.artifactId}</url>
+        <connection>${scm.base}${project.artifactId}.git</connection>
+        <developerConnection>${scm.base}${project.artifactId}.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <finalName>test</finalName>
+    </build>
+
+</project>

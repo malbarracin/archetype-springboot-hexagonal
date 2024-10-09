@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <name>${artifactId}</name>
+
+    <parent>
+        <groupId>la.ingenia.devify.assets</groupId>
+        <artifactId>devify-parent-springboot</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <dependencies>
+        <!--CONFIGURACION PARA AGREGAR DEPENDENCIAS CUSTOMIZABLES-->
+        
+
+    </dependencies>
+
+    <scm>
+        <url>${scm.base}${project.artifactId}</url>
+        <connection>${scm.base}${project.artifactId}.git</connection>
+        <developerConnection>${scm.base}${project.artifactId}.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <finalName>${artifactId}</finalName>
+    </build>
+
+</project>
