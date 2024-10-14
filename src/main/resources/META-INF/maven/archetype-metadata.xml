@@ -21,7 +21,7 @@
     </requiredProperty>
 
     <requiredProperty key="parentVersion">
-      <defaultValue>3.1.1</defaultValue>
+      <defaultValue>3.3.3</defaultValue>
     </requiredProperty>
 
     <requiredProperty key="mainClassName">

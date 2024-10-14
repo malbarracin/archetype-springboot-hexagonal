@@ -6,11 +6,12 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <name>${artifactId}</name>
-
+   
     <parent>
-        <groupId>paas-ardx-commons</groupId>
-        <artifactId>bgba-parent-paas-8</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
         <version>${parentVersion}</version>
+        <relativePath />
     </parent>
 
     <dependencies>
