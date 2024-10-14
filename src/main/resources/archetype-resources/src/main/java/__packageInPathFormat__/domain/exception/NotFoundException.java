@@ -1,10 +1,10 @@
 package ${package}.domain.exception;
 
-public class MoodNotFoundException extends RuntimeException {
+public class NotFoundException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
-	public MoodNotFoundException(String message) {
+	public NotFoundException(String message) {
 		super(message);
 	}
 }

@@ -12,23 +12,18 @@
     <description>Archetype to generate base Spring Boot microservices hexagonal</description>
 
     <properties>
-
-        <!-- Project Configuration -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- Plugin Versions -->
-        <resources.plugin.version>3.1.0</resources.plugin.version>
-        <archetype.plugin.version>3.1.2</archetype.plugin.version>
+        <resources.plugin.version>3.2.0</resources.plugin.version>
+        <archetype.plugin.version>3.2.1</archetype.plugin.version>
         <site.plugin.version>3.9.0</site.plugin.version>
         <versions.maven.plugin.version>2.7</versions.maven.plugin.version>
         <fluido.skin.version>1.9</fluido.skin.version>
         <maven.release.version>2.5.3</maven.release.version>
-
     </properties>
 
     <build>
-
         <plugins>
+            <!-- Manejo de recursos -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -37,22 +32,23 @@
                     <addDefaultExcludes>false</addDefaultExcludes>
                 </configuration>
             </plugin>
+
+            <!-- Plugin de compilación -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>${site.plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.skins</groupId>
-                        <artifactId>maven-fluido-skin</artifactId>
-                        <version>${fluido.skin.version}</version>
-                    </dependency>
-                </dependencies>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Puedes ajustar la versión -->
+                <configuration>
+                    <source>1.8</source> <!-- Ajusta según tu necesidad -->
+                    <target>1.8</target> <!-- Ajusta según tu necesidad -->
+                </configuration>
             </plugin>
+
+            <!-- Plugin de arquetipo -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>${maven.release.version}</version>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>${archetype.plugin.version}</version>
             </plugin>
         </plugins>
 
@@ -63,16 +59,6 @@
                 <version>${archetype.plugin.version}</version>
             </extension>
         </extensions>
-
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-archetype-plugin</artifactId>
-                    <version>${archetype.plugin.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 
     <reporting>

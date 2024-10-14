@@ -1,0 +1,24 @@
+server:
+  port: ${SERVICE_PORT}  # Aquí escapamos las llaves de Velocity
+
+spring:
+  webflux:
+    base-path: ${artifactId}
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+logging:
+  level:
+    root: info
+    reactor.netty.http.client: debug
+
+mongo:
+  data-base-user-name: ${DATA_BASE_USER_NAME}
+  data-base-user-password: ${DATA_BASE_USER_PASSWORD}
+  data-base-host: ${DATA_BASE_HOST}
+  data-base-name: ${DATA_BASE_NAME}
