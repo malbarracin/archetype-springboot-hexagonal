@@ -64,21 +64,23 @@ Para usar este arquetipo, necesitas:
 ## Cómo Generar un Nuevo Proyecto
 
 1. Primero, asegúrate de tener el arquetipo instalado localmente o disponible en tu repositorio Maven.
-
+   ```bash
+      mvn clean install
+   ```   
 2. Ejecuta el siguiente comando de Maven para generar un nuevo proyecto:
 
-```bash
-mvn archetype:generate \
-    -DarchetypeGroupId=ar.com.bancogalicia.assets \
-    -DarchetypeArtifactId=archetype-springboot-hexagonal \
-    -DarchetypeVersion=0.1.0-SNAPSHOT \
-    -DgroupId=[tu-group-id] \
-    -DartifactId=[tu-artifact-id] \
-    -Dversion=1.0.0-SNAPSHOT \
-    -Dpackage=[tu-paquete-base] \
-    -DparentVersion=[tu-parent-version] \
-    -DmainClassName=[tu-class-name]
-```
+    ```bash
+    mvn archetype:generate \
+        -DarchetypeGroupId=ar.com.bancogalicia.assets \
+        -DarchetypeArtifactId=archetype-springboot-hexagonal \
+        -DarchetypeVersion=0.1.0-SNAPSHOT \
+        -DgroupId=[tu-group-id] \
+        -DartifactId=[tu-artifact-id] \
+        -Dversion=1.0.0-SNAPSHOT \
+        -Dpackage=[tu-paquete-base] \
+        -DparentVersion=[tu-parent-version] \
+        -DmainClassName=[tu-class-name]
+    ```
 
 ## ¿Te gusta el contenido que comparto? Invítame un café para ayudarme a seguir creando. ¡Gracias por tu apoyo!
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-F7DF1E?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/malbarracin)    
